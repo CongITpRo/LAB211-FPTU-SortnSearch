@@ -18,27 +18,26 @@ public class Algorithm {
     static Element e = new Element();
 // Bubble Sort
 
-    public void sortArrayByBubbleSort() {
-        inputArray();
-        System.out.println("Random Unsorted array: ");
-        int a[] = e.getArr();
-        displayArr(e, a);
-        System.out.println("\nRandom Sorted array: ");
-        for (int i = 0; i < e.getArraySize(); i++) {
-            for (int j = 0; j < e.getArraySize() - i - 1; j++) {
-                if (a[j] > a[j + 1]) {
-                    int temp = a[j];
-                    a[j] = a[j + 1];
-                    a[j + 1] = temp;
+    public int[] bubbleSort(int[] arr) {
+        boolean swapped = true;
+        int j = 0;
+        int tmp;
+        while (swapped) {
+            swapped = false;
+            j++;
+            for (int i = 0; i < arr.length - j; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    tmp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = tmp;
+                    swapped = true;
                 }
             }
         }
-
-        displayArr(e, a);
-        System.out.println();
+        return arr;
     }
-
 // Quick Sort
+
     public int partition(int arr[], int left, int right) {
         int i = left, j = right;
         int tmp;
@@ -151,22 +150,4 @@ public class Algorithm {
         return e;
     }
 
-    public int[] bubbleSort(int[] arr) {
-        boolean swapped = true;
-        int j = 0;
-        int tmp;
-        while (swapped) {
-            swapped = false;
-            j++;
-            for (int i = 0; i < arr.length - j; i++) {
-                if (arr[i] > arr[i + 1]) {
-                    tmp = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = tmp;
-                    swapped = true;
-                }
-            }
-        }
-        return arr;
-    }
 }

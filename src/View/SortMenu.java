@@ -6,7 +6,7 @@ package View;
 
 import Controller.Algorithm;
 import Model.Element;
-import sortlab1.Main;
+import Main.Main;
 
 /**
  *
