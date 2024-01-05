@@ -6,7 +6,6 @@ package View;
  */
 import Controller.Algorithm;
 import Model.Element;
-import java.util.Scanner;
 import Main.Main;
 
 public class SearchMenu extends Menu {
