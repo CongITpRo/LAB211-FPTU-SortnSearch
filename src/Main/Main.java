@@ -19,7 +19,7 @@ public class Main extends Menu {
      * @param args the command line arguments
      */
     public Main() {
-        super("LAB211 Sort", new String[]{"Sort","Search", "Exit"});
+        super("LAB211 Sort", new String[]{"Sort", "Search", "Exit"});
 //        SortMenu sortM = new SortMenu(title, options);
 //        sortM.run();
     }
@@ -36,7 +36,7 @@ public class Main extends Menu {
                 sortM.run();
                 break;
             case 2:
-                SearchMenu search = new SearchMenu(title2,option2);
+                SearchMenu search = new SearchMenu(title2, option2);
                 search.run();
             case 3:
                 System.exit(0);
@@ -58,4 +58,4 @@ public class Main extends Menu {
             }
         }
     }
-} 
+}
