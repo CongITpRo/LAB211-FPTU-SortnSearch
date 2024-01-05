@@ -40,7 +40,7 @@ public class SearchMenu extends Menu {
                 arr = e.getArr();
                 System.out.println("Array inserted");
                 al.displayArr(e, arr);
-                al.quickSort(arr, 0, arr.length-1);
+                al.quickSort(arr, 0, arr.length - 1);
                 System.out.println("\nArray after sort");
                 al.displayArr(e, arr);
                 System.out.println("\nFind value at :");
@@ -51,7 +51,7 @@ public class SearchMenu extends Menu {
                     System.out.println("Value " + giatri + " found at : " + vitri);
                 }
                 break;
-            case 3:   
+            case 3:
                 new Main().run();
                 break;
         }
