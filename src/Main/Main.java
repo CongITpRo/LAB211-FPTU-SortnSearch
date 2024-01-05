@@ -38,6 +38,8 @@ public class Main extends Menu {
             case 2:
                 SearchMenu search = new SearchMenu(title2,option2);
                 search.run();
+            case 3:
+                System.exit(0);
             default:
                 System.out.println("Please enter valid number");
         }
