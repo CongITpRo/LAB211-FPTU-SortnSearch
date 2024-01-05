@@ -19,11 +19,11 @@ public class SortMenu extends Menu {
     }
 
     Algorithm al = new Algorithm();
-    Element e = new Element();
+    Element e = al.getEle();
 
     @Override
     public void execute(int n) {
-        int arr[];
+//        int arr[];
         switch (n) {
             case 1:
                 al.sortArrayByBubbleSort();
@@ -31,7 +31,7 @@ public class SortMenu extends Menu {
             case 2:
                 al.inputArray();
                 System.out.println("Random Unsorted array: ");
-                arr = e.getArr();
+                int[] arr = e.getArr();                
                 al.displayArr(e, arr);
                 al.quickSort(arr, 0, arr.length - 1);
                 System.out.println("\nRandom Sorted array: ");

@@ -16,7 +16,7 @@ public class SearchMenu extends Menu {
     }
 
     Algorithm al = new Algorithm();
-    Element e = new Element();
+    Element e = al.getEle();
 
     @Override
     public void execute(int n) {
@@ -27,7 +27,6 @@ public class SearchMenu extends Menu {
             case 1:
                 giatri = al.getIntFromInput("Enter value: ");
                 al.inputArray();
-//                arr = e.getArr();
                 System.out.println("Find value at :");
                 vitri = al.linerSearch(giatri);
                 if (vitri == -1) {
@@ -37,11 +36,15 @@ public class SearchMenu extends Menu {
                 }
                 break;
             case 2:
-                giatri = al.getIntFromInput("enter value: ");
+                giatri = al.getIntFromInput("Enter value: ");
                 al.inputArray();
                 arr = e.getArr();
+                System.out.println("Array inserted");
                 al.displayArr(e, arr);
-                System.out.println("Find value at :");
+                al.quickSort(arr, 0, arr.length-1);
+                System.out.println("\nArray after sort");
+                al.displayArr(e, arr);
+                System.out.println("\nFind value at :");
                 vitri = al.binarySearch(arr, giatri, 0, arr.length - 1);
                 if (vitri == -1) {
                     System.out.println("Not found");

@@ -6,7 +6,6 @@ package Controller;
 
 import Model.Element;
 import java.util.InputMismatchException;
-import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -72,6 +71,7 @@ public class Algorithm {
         }
 
     }
+
     //Binary Search 
     public int binarySearch(int[] array, int value, int left, int right) {
         if (left > right) {
@@ -86,6 +86,7 @@ public class Algorithm {
             return binarySearch(array, value, middle + 1, right);
         }
     }
+
     //Linear Search
     public int linerSearch(int key) {
         int[] arr = e.getArr();
@@ -137,14 +138,35 @@ public class Algorithm {
     }
 
     public void inputArray() {
-//        Element e = new Element();
         Scanner sc = new Scanner(System.in);
         e.setArraySize(getIntFromInput("Enter array size: "));
         int[] arr = new int[e.getArraySize()];
         for (int i = 0; i < e.getArraySize(); i++) {
-            arr[i] = getIntFromInput("Enter a[" + i + "]");
+            arr[i] = getIntFromInput("Enter a[" + i + "]: ");
         }
         e.setArr(arr);
     }
 
+    public Element getEle() {
+        return e;
+    }
+
+    public int[] bubbleSort(int[] arr) {
+        boolean swapped = true;
+        int j = 0;
+        int tmp;
+        while (swapped) {
+            swapped = false;
+            j++;
+            for (int i = 0; i < arr.length - j; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    tmp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = tmp;
+                    swapped = true;
+                }
+            }
+        }
+        return arr;
+    }
 }
