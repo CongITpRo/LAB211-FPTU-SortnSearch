@@ -26,12 +26,19 @@ public class SortMenu extends Menu {
 //        int arr[];
         switch (n) {
             case 1:
-                al.sortArrayByBubbleSort();
+//                al.sortArrayByBubbleSort();
+                al.inputArray();
+                System.out.println("Random Unsorted array: ");
+                int a[] = e.getArr();
+                al.displayArr(e, e.getArr());
+                System.out.println("\nRandom Sorted array: ");
+                al.displayArr(e, al.bubbleSort(e.getArr()));
+                System.out.println();
                 break;
             case 2:
                 al.inputArray();
                 System.out.println("Random Unsorted array: ");
-                int[] arr = e.getArr();                
+                int[] arr = e.getArr();
                 al.displayArr(e, arr);
                 al.quickSort(arr, 0, arr.length - 1);
                 System.out.println("\nRandom Sorted array: ");
